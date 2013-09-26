@@ -25,3 +25,15 @@ framework:
 twig:
     debug:            %kernel.debug%
     strict_variables: %kernel.debug%
+
+# app/config/config.yml
+fos_rest:
+    view:
+        view_response_listener: force
+    format_listener:
+        default_priorities: ['json', 'html', '*/*']
+        fallback_format: json
+        prefer_extension: true
+
+sensio_framework_extra:
+    view:    { annotations: false }

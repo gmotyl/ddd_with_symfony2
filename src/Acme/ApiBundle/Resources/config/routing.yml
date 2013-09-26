@@ -1,0 +1,6 @@
+# src/Acme/ApiBundle/Resources/config/routing.yml
+acme_api.user_all:
+    pattern:  /users.{_format}
+    defaults: { _controller: AcmeApiBundle:User:all, _format: ~ }
+    requirements:
+        _method: GET
