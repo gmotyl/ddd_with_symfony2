@@ -50,6 +50,8 @@ execute "date.timezone = UTC in php.ini?" do
  user "root"
  not_if "grep 'date.timezone = UTC' /etc/php5/cli/php.ini"
  command "echo -e '\ndate.timezone = UTC\n' >> /etc/php5/cli/php.ini"
+ not_if "grep 'date.timezone = UTC' /etc/php5/apache2/php.ini"
+ command "echo -e '\ndate.timezone = UTC\n' >> /etc/php5/apache2/php.ini"
 end
 
 bash "install phpunit " do
