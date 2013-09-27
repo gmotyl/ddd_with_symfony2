@@ -1,0 +1,2 @@
+_acme_api:
+    resource: "@AcmeApiBundle/Resources/config/routing.yml"
