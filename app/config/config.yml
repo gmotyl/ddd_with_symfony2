@@ -37,3 +37,10 @@ fos_rest:
 
 sensio_framework_extra:
     view:    { annotations: false }
+
+jms_serializer:
+    metadata:
+        directories:
+            CoreDomain:
+                namespace_prefix: "Acme\\CoreDomain"
+                path: "@AcmeApiBundle/Resources/config/serializer"
